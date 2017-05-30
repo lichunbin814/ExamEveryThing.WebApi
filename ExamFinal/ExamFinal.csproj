@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.4</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="assert\fonts\cwTeXHei-zhonly.ttf" />
+    <None Remove="assert\images\paper_toy.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="assert\fonts\cwTeXHei-zhonly.ttf" />
+    <EmbeddedResource Include="assert\images\paper_toy.jpg" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <PackageReference Include="ImageSharp" Version="1.0.0-alpha9-00084" />
+    <PackageReference Include="ImageSharp.Drawing" Version="1.0.0-alpha9-00079" />
+  </ItemGroup>
+</Project>
