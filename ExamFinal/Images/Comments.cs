@@ -99,11 +99,11 @@ namespace ExamFinal.Images
             int scoreUnitX = scoreX;
             int scoreUnitY = scoreY + 50;
             int interceptOfscoreUnitX = 40;
-            int digit = (Convert.ToInt32(score) / 10) + 1;
-            if (digit <= 3)
+            int decimalPlace = score.ToString().Length;
+            if (decimalPlace <= 3)
             {
-                int padding = 10;
-                scoreUnitX = scoreUnitX + (digit * interceptOfscoreUnitX) + padding;
+                int padding = 30;
+                scoreUnitX = scoreUnitX + (decimalPlace * interceptOfscoreUnitX) + padding;
             }
             img.DrawText(
                 "分",
