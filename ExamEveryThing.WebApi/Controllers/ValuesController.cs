@@ -9,18 +9,11 @@ namespace ExamEveryThing.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public string Get()
-        {
-            return new ExamFinal.Images.Comments().GetBase64(2);
-        }
-
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{score}")]
+        public JsonResult Get(int score)
         {
-            return "value";
+            return Json(new ExamFinal.Images.Comments().GetBase64(score));
         }
 
         // POST api/values
